@@ -50,3 +50,20 @@ const RemoveItem = (btn) => {
     NewMa(`${btn.id} removed`);
     Finishedlist(Finished_list);
 };
+const delay = (delayInms) => new Promise(resolve => setTimeout(resolve, delayInms));
+
+const NewMa = async (m = 'Error', t = false) => {
+    const x = document.getElementById('text-box');
+    x.className = `text-box ${t ? 'ok' : 'err'}`;
+    x.style.opacity = '0%';
+    x.innerHTML = `<p>${m}</p>`;
+    x.style.opacity = '100%';
+    await delay(1500);
+    x.style.opacity = '0%';
+};
+
+// هنگام بارگذاری صفحه لیست‌ها را از LocalStorage بخوانید
+window.onload = () => {
+    Todolist(Todo_List);
+    Finishedlist(Finished_list);
+};

@@ -65,3 +65,112 @@ header button:hover {
     background: #07c261;
     color: #fdfdfd;
 }
+
+
+main {
+    grid-area: 2 / 2 / 3 / 3;
+    align-self: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+main section {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
+
+main section article {
+    width: 80%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    gap: 2rem;
+    padding: 50px 0 20px;
+    border-radius: 16px;
+    background: #fdfdfd;
+}
+
+main section article .items {
+    overflow-y: auto;
+    width: 100%;
+    padding: 1rem;
+}
+
+main section article .item {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 5rem;
+}
+
+main section article .item div {
+    color: #fdfdfd;
+    background: #000000;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 6px 0 0 6px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+main section article .item div p {
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+main section article .item p.remove {
+    background: #000000;
+}
+
+main section article .item button {
+    /* all: unset; */
+    background: #fdfdfd;
+    width: 100%;
+    justify-self: flex-end;
+    border-radius: 0 6px 6px 0;
+    transition: 0.2s;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+}
+
+main section article .item button.Finished-btn {
+    border: 3px solid #07c261;
+    border-left: 0;
+    color: #07c261;
+}
+
+main section article .item button.Finished-btn:hover {
+    background: #07c261;
+    color: #fdfdfd;
+}
+
+main section article .item button.Remove {
+    border: 3px solid #c20707;
+    border-left: 0;
+    color: #c20707;
+}
+
+main section article .item button.Remove:hover {
+    background: #c20707;
+    color: #fdfdfd;
+}

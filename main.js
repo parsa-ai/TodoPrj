@@ -36,3 +36,17 @@ const AddItem = () => {
         NewMa('Input is empty');
     }
 };
+
+const FinishedItem = (btn) => {
+    Todo_List = Todo_List.filter(work => work !== btn.id);
+    Finished_list.push(btn.id);
+    Todolist(Todo_List);
+    Finishedlist(Finished_list);
+    NewMa(`${btn.id} Finished`, true);
+};
+
+const RemoveItem = (btn) => {
+    Finished_list = Finished_list.filter(item => item !== btn.id);
+    NewMa(`${btn.id} removed`);
+    Finishedlist(Finished_list);
+};

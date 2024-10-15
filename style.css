@@ -210,3 +210,33 @@ main section article .item button.Remove:hover {
     width: fit-content;
     white-space: nowrap;
 }
+
+
+@media screen and (max-width: 900px) {
+    body {
+        grid-template-rows: 1fr 4fr;
+        font-size: 0.8rem;
+    }
+
+    main section {
+        flex-direction: column;
+        height: 600px;
+        gap: 1rem;
+    }
+
+    main section article {
+        width: 100%;
+        max-height: 50%;
+    }
+    main section article .item button {
+        font-size: 0.5rem;
+    }
+    .text-box {
+        grid-row-start: 2;
+        grid-column-start: 3;
+        grid-row-end: 3;
+        grid-column-end: 4;
+        position: absolute;
+        bottom: 10px;
+    }
+}

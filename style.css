@@ -174,3 +174,39 @@ main section article .item button.Remove:hover {
     background: #c20707;
     color: #fdfdfd;
 }
+
+.text-box {
+    width: 80%;
+    height: 4rem;
+    border-radius: 16px;
+    color: #fdfdfd;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 2;
+    grid-column-end: 4;
+    transition: 0.5s;
+    opacity: 0%;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+.text-box.ok {
+    background-color: #07c261;
+}
+
+.text-box.err {
+    background-color: #c20707;
+}
+
+.text-box p {
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    width: fit-content;
+    white-space: nowrap;
+}

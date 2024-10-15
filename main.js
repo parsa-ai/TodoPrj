@@ -22,3 +22,17 @@ const Finishedlist = (Finished_list) => {
     ul.innerHTML = items;
     localStorage.setItem('Finished_list', JSON.stringify(Finished_list));
 };
+const AddItem = () => {
+    const text = document.getElementById('AddInput').value;
+    if (text !== '') {
+        if (Todo_List.includes(text)) {
+            NewMa(`${text} is already in the list`);
+        } else {
+            Todo_List.push(text);
+            Todolist(Todo_List);
+            NewMa(`${text} Added`, true);
+        }
+    } else {
+        NewMa('Input is empty');
+    }
+};
